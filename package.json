@@ -1,0 +1,14 @@
+{
+  "name": "inputtypes",
+  "version": "1.0.0",
+  "description": "PropTypes inspired API for function arguments",
+  "main": "input-types.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "Brian Swisher",
+  "license": "ISC",
+  "devDependencies": {
+    "blue-tape": "^1.0.0"
+  }
+}
