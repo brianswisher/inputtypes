@@ -6,6 +6,7 @@ test('Usage', function(t) {
   function App(f, n) { InputTypes.apply(App, arguments) }
 
   App.inputTypes = [
+    InputTypes.object,
     (val) => typeof val === InputTypes.string || typeof val === InputTypes.number,
     [
       InputTypes.number,
@@ -16,12 +17,11 @@ test('Usage', function(t) {
         InputTypes.object
       ]
     ],
-    InputTypes.object,
     InputTypes.func
   ]
 
   t.doesNotThrow(
-    () => App('hello world', [1, '2', ['1', 3, {}]], {a: '123'}, () => {}),
+    () => App({a: '123'}, 'hello world', [1, '2', ['1', 3, {}]], () => {}),
     'does not throw'
   )
 

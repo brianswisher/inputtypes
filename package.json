@@ -1,14 +1,18 @@
 {
   "name": "inputtypes",
   "version": "1.0.0",
-  "description": "PropTypes inspired API for function arguments",
+  "description": "Argument Validation Inspired by React's PropTypes API",
   "main": "input-types.js",
+  "devDependencies": {
+    "blue-tape": "^1.0.0"
+  },
   "scripts": {
     "test": "node test"
   },
   "author": "Brian Swisher",
-  "license": "ISC",
-  "devDependencies": {
-    "blue-tape": "^1.0.0"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brianswisher/inputtypes.git"
+  },
+  "license": "ISC"
 }
