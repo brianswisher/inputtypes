@@ -1,6 +1,6 @@
 {
   "name": "inputtypes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Argument Validation Inspired by React's PropTypes API",
   "main": "input-types.js",
   "devDependencies": {

@@ -8,7 +8,7 @@ Argument Validation Inspired by React's PropTypes API
 ```javascript
 var InputTypes = require('./input-types')
 
-function App(f, n) { InputTypes.apply(App, arguments) }
+function App() { InputTypes.apply(App, arguments) }
 
 App.inputTypes = [
   InputTypes.object,

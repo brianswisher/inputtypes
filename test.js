@@ -3,7 +3,7 @@ var test = require('blue-tape')
 var InputTypes = require('./input-types')
 
 test('Usage', function(t) {
-  function App(f, n) { InputTypes.apply(App, arguments) }
+  function App() { InputTypes.apply(App, arguments) }
 
   App.inputTypes = [
     InputTypes.object,
@@ -29,7 +29,7 @@ test('Usage', function(t) {
 })
 
 test('String is not an object', function(t) {
-  function App(f, n) { InputTypes.apply(App, arguments) }
+  function App() { InputTypes.apply(App, arguments) }
 
   App.inputTypes = [InputTypes.object]
 
@@ -39,7 +39,7 @@ test('String is not an object', function(t) {
 })
 
 test('Object is not a string', function(t) {
-  function App(f, n) { InputTypes.apply(App, arguments) }
+  function App() { InputTypes.apply(App, arguments) }
 
   App.inputTypes = [InputTypes.string]
 
@@ -49,7 +49,7 @@ test('Object is not a string', function(t) {
 })
 
 test('Number is not a function', function(t) {
-  function App(f, n) { InputTypes.apply(App, arguments) }
+  function App() { InputTypes.apply(App, arguments) }
 
   App.inputTypes = [InputTypes.func]
 
@@ -59,7 +59,7 @@ test('Number is not a function', function(t) {
 })
 
 test('Function is not a number', function(t) {
-  function App(f, n) { InputTypes.apply(App, arguments) }
+  function App() { InputTypes.apply(App, arguments) }
 
   App.inputTypes = [InputTypes.number]
 
@@ -69,7 +69,7 @@ test('Function is not a number', function(t) {
 })
 
 test('Nested input types', function(t) {
-  function App(f, n) { InputTypes.apply(App, arguments) }
+  function App() { InputTypes.apply(App, arguments) }
 
   App.inputTypes = [
     [
@@ -97,7 +97,7 @@ test('Nested input types', function(t) {
 })
 
 test('Type from function', function(t) {
-  function App(f, n) { InputTypes.apply(App, arguments) }
+  function App() { InputTypes.apply(App, arguments) }
 
   App.inputTypes = [
     (val) => typeof val === InputTypes.number || typeof val === InputTypes.string
